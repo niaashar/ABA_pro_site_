@@ -1,0 +1,41 @@
+name: Обновить встречи из Яндекс Календаря
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-meetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Скачать код сайта
+        uses: actions/checkout@v5
+
+      - name: Подготовить Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Установить библиотеки
+        run: pip install requests icalendar recurring-ical-events python-dateutil
+
+      - name: Получить ближайшие встречи
+        env:
+          YANDEX_CALENDAR_ICS_URL: ${{ secrets.YANDEX_CALENDAR_ICS_URL }}
+        run: python .github/scripts/update_meetings.py
+
+      - name: Сохранить обновлённое расписание
+        run: |
+          if git diff --quiet -- data/meetings.json; then
+            echo "Расписание не изменилось"
+            exit 0
+          fi
+          git config user.name "ABA_pro Calendar Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/meetings.json
+          git commit -m "Обновить расписание встреч"
+          git push
