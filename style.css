@@ -3860,3 +3860,301 @@ button.btn:hover,
     margin-top: 8px;
   }
 }
+
+/* =========================================================
+   ОБУЧАЮЩИЕ ВСТРЕЧИ — КАРУСЕЛЬ И СКРЫВАЕМОЕ ОПИСАНИЕ
+   ========================================================= */
+.meetings-carousel {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+}
+
+.meetings-carousel[hidden] {
+  display: none;
+}
+
+.meetings-carousel-viewport {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.meetings-carousel .meetings-cards-grid {
+  display: flex;
+  grid-template-columns: none;
+  gap: 18px;
+  align-items: stretch;
+  padding: 8px 2px 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.meetings-carousel .meetings-cards-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.meetings-carousel .meeting-event-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-height: 500px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.meetings-carousel-button {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(95, 141, 123, .22);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--green-dark);
+  font: inherit;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(55, 65, 81, .08);
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease, opacity .2s ease;
+}
+
+.meetings-carousel-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: var(--green);
+  background: rgba(95, 141, 123, .08);
+}
+
+.meetings-carousel-button:focus-visible {
+  outline: 3px solid rgba(95, 141, 123, .22);
+  outline-offset: 3px;
+}
+
+.meetings-carousel-button:disabled {
+  opacity: .3;
+  cursor: default;
+  box-shadow: none;
+}
+
+.meetings-carousel.is-static .meetings-carousel-button {
+  visibility: hidden;
+}
+
+.meetings-carousel-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 12px;
+  margin: 4px 0 0;
+}
+
+.meetings-carousel-dots[hidden] {
+  display: none;
+}
+
+.meetings-carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(95, 141, 123, .28);
+  cursor: pointer;
+  transition: width .2s ease, background-color .2s ease, transform .2s ease;
+}
+
+.meetings-carousel-dot:hover {
+  transform: scale(1.15);
+}
+
+.meetings-carousel-dot.is-active {
+  width: 24px;
+  background: var(--green);
+}
+
+.meeting-meta-primary {
+  margin: 4px 0 16px;
+}
+
+.meeting-meta-primary .meeting-price {
+  border-color: rgba(95, 141, 123, .25);
+  background: rgba(95, 141, 123, .11);
+  color: var(--green-dark);
+}
+
+.meeting-card-details {
+  margin: 0 0 18px;
+  border: 1px solid rgba(95, 141, 123, .15);
+  border-radius: 16px;
+  background: rgba(95, 141, 123, .045);
+  overflow: hidden;
+}
+
+.meeting-card-details-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 11px 14px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.meeting-card-details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.meeting-card-details-summary:focus-visible {
+  outline: 3px solid rgba(95, 141, 123, .2);
+  outline-offset: -3px;
+}
+
+.meeting-card-details-arrow {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: rgba(95, 141, 123, .11);
+  font-size: 18px;
+  transition: transform .2s ease;
+}
+
+.meeting-card-details[open] .meeting-card-details-arrow {
+  transform: rotate(180deg);
+}
+
+.meeting-card-details-body {
+  padding: 0 14px 14px;
+  border-top: 1px solid rgba(95, 141, 123, .1);
+}
+
+.meeting-card-details-body .meeting-description {
+  margin: 13px 0 0;
+}
+
+.meeting-details-meta {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.meeting-details-meta p {
+  margin: 4px 0 0;
+}
+
+.meeting-card-actions {
+  margin-top: auto;
+}
+
+.meeting-card-actions .btn {
+  flex: 1 1 150px;
+  justify-content: center;
+  text-align: center;
+}
+
+.full-calendar-details[open] .full-calendar-content {
+  animation: full-calendar-reveal .22s ease;
+}
+
+@keyframes full-calendar-reveal {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1040px) {
+  .meetings-carousel .meeting-event-card {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+}
+
+@media (max-width: 680px) {
+  .meetings-carousel {
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 7px;
+  }
+
+  .meetings-carousel-button {
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+  }
+
+  .meetings-carousel .meetings-cards-grid {
+    gap: 12px;
+    padding-bottom: 14px;
+  }
+
+  .meetings-carousel .meeting-event-card {
+    flex-basis: 100%;
+    min-height: 500px;
+  }
+
+  .meeting-card-actions .btn {
+    flex-basis: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meetings-carousel .meetings-cards-grid {
+    scroll-behavior: auto;
+  }
+
+  .full-calendar-details[open] .full-calendar-content {
+    animation: none;
+  }
+}
+
+/* Мобильная карусель: карточка занимает всю доступную ширину,
+   стрелки размещаются поверх краёв и не сжимают содержимое. */
+@media (max-width: 680px) {
+  .meetings-carousel {
+    position: relative;
+    display: block;
+  }
+
+  .meetings-carousel-viewport {
+    width: 100%;
+  }
+
+  .meetings-carousel-button {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 8px 22px rgba(55, 65, 81, .13);
+  }
+
+  .meetings-carousel-button:hover:not(:disabled) {
+    transform: translateY(calc(-50% - 2px));
+  }
+
+  .meetings-carousel-prev {
+    left: -5px;
+  }
+
+  .meetings-carousel-next {
+    right: -5px;
+  }
+
+  .meetings-carousel .meeting-event-card {
+    flex-basis: 100%;
+    min-height: 540px;
+  }
+}

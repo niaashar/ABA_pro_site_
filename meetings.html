@@ -23,11 +23,18 @@
 <button aria-pressed="false" class="meeting-filter" data-meeting-filter="online" type="button">Онлайн</button>
 <button aria-pressed="false" class="meeting-filter" data-meeting-filter="offline" type="button">Очно</button>
 </div>
+<div class="meetings-carousel" id="meetings-carousel">
+<button aria-label="Предыдущие встречи" class="meetings-carousel-button meetings-carousel-prev" id="meetings-prev" type="button">‹</button>
+<div class="meetings-carousel-viewport">
 <div aria-busy="true" aria-live="polite" class="meetings-cards-grid" id="meetings-list">
 <article aria-hidden="true" class="meeting-event-card meeting-card-skeleton"></article>
 <article aria-hidden="true" class="meeting-event-card meeting-card-skeleton"></article>
 <article aria-hidden="true" class="meeting-event-card meeting-card-skeleton"></article>
 </div>
+</div>
+<button aria-label="Следующие встречи" class="meetings-carousel-button meetings-carousel-next" id="meetings-next" type="button">›</button>
+</div>
+<div aria-label="Навигация по встречам" class="meetings-carousel-dots" id="meetings-dots"></div>
 <div class="meetings-state" hidden="" id="meetings-empty">
 <span aria-hidden="true" class="meetings-state-icon">🗓️</span>
 <h3>Новых встреч пока нет</h3>
@@ -49,11 +56,11 @@
 </summary>
 <div class="full-calendar-content">
 <div class="calendar-embed-wrap">
-<iframe class="yandex-calendar-frame" frameborder="0" height="600" loading="lazy" src="https://calendar.yandex.kz/embed/month?layer_ids=36506515&amp;tz_id=Europe/Moscow&amp;layer_names=ABA_pro%20%D0%9E%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D0%B5%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B8" style="border:1px solid rgba(95,141,123,.18);border-radius:24px;" title="Расписание обучающих встреч ABA_pro" width="100%"></iframe>
+<iframe class="yandex-calendar-frame" frameborder="0" height="600" loading="lazy" src="https://calendar.yandex.ru/embed/month?layer_ids=36506515&amp;tz_id=Europe/Moscow&amp;layer_names=ABA_pro%20%D0%9E%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D0%B5%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B8" style="border:1px solid rgba(95,141,123,.18);border-radius:24px;" title="Расписание обучающих встреч ABA_pro" width="100%"></iframe>
 </div>
 <div class="calendar-fallback">
 <p>Если календарь не загрузился, откройте расписание в отдельной вкладке.</p>
-<a class="btn btn-primary" href="https://calendar.yandex.kz/embed/month?layer_ids=36506515&amp;tz_id=Europe/Moscow&amp;layer_names=ABA_pro%20%D0%9E%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D0%B5%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B8" rel="noopener noreferrer" target="_blank">Открыть календарь</a>
+<a class="btn btn-primary" href="https://calendar.yandex.ru/embed/month?layer_ids=36506515&amp;tz_id=Europe/Moscow&amp;layer_names=ABA_pro%20%D0%9E%D0%B1%D1%83%D1%87%D0%B0%D1%8E%D1%89%D0%B8%D0%B5%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B8" rel="noopener noreferrer" target="_blank">Открыть календарь</a>
 </div>
 </div>
 </details>
