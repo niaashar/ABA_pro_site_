@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T15:48:53.662055+03:00",
+  "updatedAt": "2026-06-29T19:30:04.153635+03:00",
   "timezone": "Europe/Moscow",
   "events": [
     {
@@ -13,44 +13,10 @@
       "format": "онлайн",
       "formatKey": "online",
       "duration": "1 ч",
-      "price": "1-я встреча в подарок.",
+      "price": "без оплаты",
       "location": "",
       "description": "Ссылка на видеовстречу: https://telemost.yandex.ru/j/06986878658089 Для родителей. Поговорим о том, почему умения, которые появляются на занятиях, не всегда используются дома и в повседневной жизни. Разберём основные причины и обсудим, что могут сделать родители, чтобы навыки действительно стали частью жизни ребёнка.",
       "detailsUrl": "https://calendar.yandex.ru/event?event_id=253109216560322",
-      "registrationUrl": ""
-    },
-    {
-      "id": "9a0n404x3u8kwljxjn87yandex.ru",
-      "title": "Для родителей. Почему навык не переносится в жизнь",
-      "start": "2026-07-05T13:00:00+03:00",
-      "end": "2026-07-05T14:00:00+03:00",
-      "allDay": false,
-      "audience": "Для родителей",
-      "audienceKey": "parents",
-      "format": "онлайн",
-      "formatKey": "online",
-      "duration": "1 ч",
-      "price": "1-я встреча в подарок",
-      "location": "",
-      "description": "Поговорим о том, почему умения, которые появляются на занятиях, не всегда используются дома и в повседневной жизни. Разберём основные причины и обсудим, что могут сделать родители, чтобы навыки действительно стали частью жизни ребёнка.",
-      "detailsUrl": "https://calendar.yandex.ru/event?event_id=253105650828224",
-      "registrationUrl": ""
-    },
-    {
-      "id": "9a0n404x3u4gph7rk4ybyandex.ru",
-      "title": "Для родителей/ Почему ребенок не переносит навык в реальную жизнь",
-      "start": "2026-07-05T13:00:00+03:00",
-      "end": "2026-07-05T14:00:00+03:00",
-      "allDay": false,
-      "audience": "для родителей.",
-      "audienceKey": "parents",
-      "format": "онлайн",
-      "formatKey": "online",
-      "duration": "1 ч",
-      "price": "1-я встреча в подарок",
-      "location": "",
-      "description": "разберем ситуации из жизни ребенка, где навык \"скачет\", разберем причины и способы переноса умений в реальную жизнь",
-      "detailsUrl": "https://calendar.yandex.ru/event?event_id=252958046110110",
       "registrationUrl": ""
     },
     {
@@ -68,23 +34,6 @@
       "location": "",
       "description": "Практический разбор типичных ошибок, влияющих на обучение и перенос навыков, с рекомендациями, которые можно применять в повседневной жизни.",
       "detailsUrl": "https://calendar.yandex.ru/event?event_id=253579496081184",
-      "registrationUrl": ""
-    },
-    {
-      "id": "9a0n404x3u46tm1wtagzyandex.ru",
-      "title": "Для родителей. 5 ошибок при переносе навыка",
-      "start": "2026-07-12T13:00:00+03:00",
-      "end": "2026-07-12T13:30:00+03:00",
-      "allDay": false,
-      "audience": "для родителей",
-      "audienceKey": "parents",
-      "format": "запись",
-      "formatKey": "",
-      "duration": "30 мин",
-      "price": "500 р",
-      "location": "",
-      "description": "анализ ошибок и практические советы переноса навыка в жизнь",
-      "detailsUrl": "https://calendar.yandex.ru/event?event_id=252951010855281",
       "registrationUrl": ""
     }
   ]
